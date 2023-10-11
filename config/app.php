@@ -14,6 +14,7 @@ return [
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
     |
+    | Setting new app name as the deafult.
     */
 
     'name' => env('APP_NAME', 'Creaturetopia'),
@@ -27,6 +28,7 @@ return [
     | running in. This may determine how you prefer to configure various
     | services the application utilizes. Set this in your ".env" file.
     |
+    | Changed from deployed environmnet to local.
     */
 
     'env' => env('APP_ENV', 'local'),
@@ -68,6 +70,7 @@ return [
     | will be used by the PHP date and date-time functions. We have gone
     | ahead and set this to a sensible default for you out of the box.
     |
+    | Setting local timezone for use by app.
     */
 
     'timezone' => 'Australia/Sydney',

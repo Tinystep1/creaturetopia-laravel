@@ -11,6 +11,10 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     Hello, {{Auth::user()->username;}}!
                 </div>
+                <div>
+                    <!-- Button to add new pets -->
+                    <button class="p-6 text-gray-900 dark:text-gray-100" onclick="window.location='{{url("app/models/pet")}}'">Create</button>
+                </div>
             </div>
         </div>
     </div>
