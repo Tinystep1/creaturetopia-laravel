@@ -15,10 +15,9 @@ class PetController extends Controller
      */
     public function index(): View
     {
-        $pets = Pet::latest()->paginate(5);
+        $pets = Pet::all();
 
-        return view('pets.index',compact('pets'))
-        ->with('i',(request()->input('page', 1) - 1) * 5);
+        return view('pets.index')->with('pets', $pets);
     }
 
     /**
@@ -36,7 +35,6 @@ class PetController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'user_id' => 'required',
         ]);
 
         Pet::create($request->all());
